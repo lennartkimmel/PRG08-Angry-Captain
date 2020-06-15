@@ -1,13 +1,15 @@
 class Main {
 
     private ships : PirateShip[] = []
+    private messagebord : Messagebord
 
     constructor() {
         for (let i = 0; i < 10; i++) {
             this.ships.push(new PirateShip())
         }
 
-        // Eventueel Messageboard aanmaken zodat deze zichtbaar wordt?
+    //    this.messagebord = Messagebord.getInstance()
+    // this.messagebord.push(new Messagebord())
 
         this.gameLoop()
     }
@@ -30,6 +32,7 @@ class Main {
             }
         }
 
+        // Messagebord.getInstance(new Messagebord)
         requestAnimationFrame(() => this.gameLoop())
     }
 }
